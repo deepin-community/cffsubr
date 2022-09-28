@@ -1,0 +1,21 @@
+From: =?utf-8?b?IllhbyBXZWkgKOmtj+mKmOW7tyki?= <mwei@debian.org>
+Date: Wed, 23 Sep 2020 22:53:39 +0800
+Subject: disable building tx binary
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 6b2959c..1e54f20 100755
+--- a/setup.py
++++ b/setup.py
+@@ -135,7 +135,7 @@ setup(
+     platforms=["posix", "nt"],
+     package_dir={"": "src"},
+     packages=find_packages("src"),
+-    ext_modules=[tx],
++    ext_modules=[],
+     zip_safe=False,
+     cmdclass=cmdclass,
+     install_requires=[

@@ -1,0 +1,33 @@
+From: =?utf-8?b?IllhbyBXZWkgKOmtj+mKmOW7tyki?= <mwei@debian.org>
+Date: Wed, 23 Sep 2020 22:26:26 +0800
+Subject: remove dependency to setuptools-git-ls-files
+
+---
+ pyproject.toml | 1 -
+ setup.py       | 2 --
+ 2 files changed, 3 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 84e6dad..4dd7e66 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -3,6 +3,5 @@ requires = [
+     "setuptools",
+     "wheel",
+     "setuptools_scm",
+-    "setuptools-git-ls-files",
+ ]
+ build-backend = "setuptools.build_meta"
+diff --git a/setup.py b/setup.py
+index 14761ed..6b2959c 100755
+--- a/setup.py
++++ b/setup.py
+@@ -144,8 +144,6 @@ setup(
+     ],
+     setup_requires=[
+         "setuptools_scm",
+-        # finds all git tracked files including submodules when making sdist MANIFEST
+-        "setuptools-git-ls-files",
+     ],
+     extras_require={"testing": ["pytest"]},
+     python_requires=">=3.6",
